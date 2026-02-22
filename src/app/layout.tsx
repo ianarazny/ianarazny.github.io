@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SidebarNav from "./components/SidebarNav";
+import AnimatedBackground from "./components/AnimatedBackground";
 import { GitHubIcon, LinkedInIcon } from "@/assets/icons";
 
 export const metadata: Metadata = {
@@ -16,18 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="mt-24 antialiased">
-        <div className="background" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <AnimatedBackground />
         <div className="content-wrapper relative z-10 mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:flex lg:justify-center lg:gap-16 lg:px-24 lg:py-0">
           <Sidebar />
           <main className="pt-24 lg:w-1/2 lg:py-36">
